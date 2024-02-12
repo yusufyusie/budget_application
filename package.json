@@ -7,6 +7,7 @@
     "jquery": "^3.7.1",
     "node-sass": "^9.0.0",
     "popper.js": "^1.16.1",
+    "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0"
   }
 }
