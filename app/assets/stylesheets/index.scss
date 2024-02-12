@@ -10,42 +10,42 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
+    border: none;
     color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #0056b3;
+      color: white;
+    }
   }
-}
-
-.btn-outline-primary {
-  background-color: transparent;
-  border-color: #007bff;
-  color: #007bff;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #007bff;
-    color: white;
+  
+  .btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #007bff;
+      color: white;
+      border-color: #0056b3;
+    }
   }
-}
 
 .img-fluid {
   max-height: 60%;
