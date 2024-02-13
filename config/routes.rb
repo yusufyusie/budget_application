@@ -1,18 +1,12 @@
 # config/routes.rb
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
 
   # Dashboard route
   get '/dashboard', to: 'dashboard#index', as: 'dashboard'
 
   # Home route
   root to: 'home#index'
-
-  # User registration routes
-  resources :users, only: [:new, :create], path_names: { new: 'signup' }
-
-  # Session management routes
-  resource :session, only: [:new, :create, :destroy], path_names: { new: 'login', create: 'login', destroy: 'logout' }
 
   # Health check route
   get 'up', to: 'rails/health#show', as: :rails_health_check
