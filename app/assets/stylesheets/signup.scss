@@ -7,14 +7,21 @@ $normal-grey: #616161;
 $light-grey: #8d8d8d;
 $dark-grey: #2b2b2b;
 
+.signup-body {
+  background-image: url('https://source.unsplash.com/random/800x600');
+  background-size: cover;
+}
+
 .signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background-color: $secondary-white;
+  background-color: rgba($secondary-white, 0.8);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 600px;
+  margin: 0 auto;
 }
 
 .signup-title {
@@ -23,27 +30,41 @@ $dark-grey: #2b2b2b;
   margin-bottom: 1rem;
 }
 
-.signup-form {
-  width: 100%;
-  max-width: 400px;
-}
-
 .form-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  width: 80%;
+  min-width: 250px;
+}
+
+.form-icon {
+  position: absolute;
+  top: 70%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 .form-label {
   font-weight: 600;
   color: $dark-grey;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 
 .form-input {
   padding: 0.5rem;
+  padding-left: 40px;
   border: 1px solid $light-grey;
   border-radius: 0.25rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: calc(100% - 10px);
+}
+
+.form-input:focus {
+  border-color: $blue;
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba($blue, 0.25);
 }
 
 .password-minimum {
@@ -60,13 +81,13 @@ $dark-grey: #2b2b2b;
 .signup-button {
   padding: 0.5rem 1rem;
   color: $white;
-  background-color: $blue;
+  background: linear-gradient(to right, $blue, darken($blue, 10%));
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .signup-button:hover {
-  background-color: darken($blue, 10%);
+  background: linear-gradient(to right, darken($blue, 10%), $blue);
 }
