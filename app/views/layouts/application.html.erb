@@ -22,7 +22,7 @@
 
   <body>
      <% unless home_page? %>
-      <% if logged_in? %>
+      <% if user_signed_in? %>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">Budget App</a>
