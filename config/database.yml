@@ -81,6 +81,12 @@ test:
 #
 production:
   <<: *default
-  database: budget_application_production
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: budget_app_development_j405
+  host: dpg-cn461lgl5elc73cqq6mg-a
+  port: 5432
   username: user
-  password: user
+  password: i2uHKeICXNawX7sMucj27jokyogrCt7x
