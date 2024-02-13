@@ -86,7 +86,7 @@ production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
   database: budget_application_production
-  host: dpg-cn5q2b2cn0vc73d8cq10-a
+  host: <%= ENV['DATABASE_HOST'] %>
   port: 5432
   username: user
   password: lYBHxZ5GolPbIEunWOPxJZK7WBi6E6w5
