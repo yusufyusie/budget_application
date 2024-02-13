@@ -1,7 +1,7 @@
 databases:
   - name: postgresql
     databaseName: budget_app_development_j405
-    user: i2uHKeICXNawX7sMucj27jokyogrCt7x
+    user: user
     plan: free
 
 services:
