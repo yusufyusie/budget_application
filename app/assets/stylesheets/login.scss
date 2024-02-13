@@ -1,3 +1,6 @@
+$blue: #3b74b4;
+$white: #fff;
+
 .container {
     .card {
       .card-body {
@@ -17,3 +20,23 @@
       }
     }
   }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-button {
+    padding: 0.5rem 1rem;
+    color: $white;
+    background: linear-gradient(to right, $blue, darken($blue, 10%));
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(to right, darken($blue, 10%), $blue);
+  }
+  
