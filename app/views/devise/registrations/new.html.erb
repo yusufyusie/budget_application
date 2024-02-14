@@ -1,55 +1,63 @@
-<body class="signup-body">
-<div class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card shadow">
-        <div class="card-body">
-          <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Sign up</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+  <body class="signup-body">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Sign up</h2>
 
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'mt-4' }) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
+              <%= form_with(model: resource, as: resource_name, url: registration_path(resource_name), html: { class: 'mt-4', data: { turbo_frame: 'my_frame' } }) do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
 
-            <div class="mb-3">
-              <%= f.label :name, class: 'form-label' %>
-              <div class="input-group">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control', placeholder: 'Enter your name' %>
-              </div>
+                <div class="mb-3">
+                  <%= f.label :name, class: 'form-label' %>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control', placeholder: 'Enter your name' %>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <%= f.label :email, class: 'form-label' %>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <%= f.email_field :email, autocomplete: "email", class: 'form-control', placeholder: 'Enter your email' %>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <%= f.label :password, class: 'form-label' %>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', placeholder: 'Enter your password' %>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <%= f.label :password_confirmation, class: 'form-label' %>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', placeholder: 'Confirm your password' %>
+                  </div>
+                </div>
+
+                <div class="form-actions text-center">
+                  <%= f.submit "Sign up", class: 'signup-button btn-lg px-5' %>
+                </div>
+              <% end %>
+
+              <%= render "devise/shared/links" %>
             </div>
-
-            <div class="mb-3">
-              <%= f.label :email, class: 'form-label' %>
-              <div class="input-group">
-                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                <%= f.email_field :email, autocomplete: "email", class: 'form-control', placeholder: 'Enter your email' %>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <%= f.label :password, class: 'form-label' %>
-              <div class="input-group">
-                <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', placeholder: 'Enter your password' %>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <%= f.label :password_confirmation, class: 'form-label' %>
-              <div class="input-group">
-                <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', placeholder: 'Confirm your password' %>
-              </div>
-            </div>
-
-            <div class="form-actions text-center">
-              <%= f.submit "Sign up", class: 'signup-button btn-lg px-5' %>
-            </div>
-          <% end %>
-
-          <%= render "devise/shared/links" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
+</html>
