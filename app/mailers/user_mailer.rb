@@ -1,4 +1,8 @@
+# app/mailers/user_mailer.rb
+
 class UserMailer < ApplicationMailer
+  default from: 'notifications@example.com'
+
   def welcome_email(user)
     @user = user
     @url  = new_user_session_url
@@ -6,9 +10,9 @@ class UserMailer < ApplicationMailer
   end
 
   def confirmation_instructions(user, token, opts={})
-    @user = user
+    @resource = user
     @token = token
     @url  = user_confirmation_url(@token)
-    mail(to: @user.email, subject: 'Confirmation instructions')
+    mail(to: @resource.email, subject: 'Confirmation instructions')
   end
 end
