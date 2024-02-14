@@ -3,6 +3,7 @@ databases:
     databaseName: budget_application_production
     user: user
     plan: free
+    ipAllowList: []
 
 services:
   - type: web
