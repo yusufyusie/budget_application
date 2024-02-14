@@ -41,9 +41,8 @@
                 <li class="nav-item">
                   <%= link_to 'Categories', groups_path, class: 'nav-link' %>
                 </li>
-                </li>
                 <li class="nav-item">
-                  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                  <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'nav-link' %>
                 </li>
               </ul>
             </div>
@@ -67,7 +66,7 @@
                     <%= link_to 'Categories', groups_path, class: 'nav-link' %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                    <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'nav-link' %>
                   </li>
                 </ul>
               </div>
