@@ -8,20 +8,50 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-user1 = User.create!(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
-user2 = User.create!(name: 'Alan', email: 'alan@example.com', password: 'topsecret')
-user3 = User.create!(name: 'Lily', email: 'lily@example.com', password: 'topsecret')
+user1 = User.find_or_create_by!(email: 'tom@example.com') do |user|
+  user.name = 'Tom'
+  user.password = 'topsecret'
+end
 
-group1 = Group.create!(user: user1, name: 'Lunches', icon: 'https://i.pravatar.cc/300?img=1')
-group2 = Group.create!(user: user1, name: 'Cosmetics', icon: 'https://i.pravatar.cc/300?img=2')
-group3 = Group.create!(user: user1, name: 'Clothes', icon: 'https://i.pravatar.cc/300?img=3')
+user2 = User.find_or_create_by!(email: 'alan@example.com') do |user|
+  user.name = 'Alan'
+  user.password = 'topsecret'
+end
 
-purchase1 = Purchase.create!(author: user1, name: 'Cream', amount: 10)
-purchase2 = Purchase.create!(author: user1, name: 'Shampoo', amount: 20)
-purchase3 = Purchase.create!(author: user1, name: 'New Dress', amount: 5)
+user3 = User.find_or_create_by!(email: 'lily@example.com') do |user|
+  user.name = 'Lily'
+  user.password = 'topsecret'
+end
 
-GroupPurchase.create!(group: group2, purchase: purchase1)
-GroupPurchase.create!(group: group2, purchase: purchase2)
-GroupPurchase.create!(group: group3, purchase: purchase3)
+group1 = Group.find_or_create_by!(name: 'Lunches', user: user1) do |group|
+  group.icon = 'https://i.pravatar.cc/300?img=1'
+end
 
-user = User.create!(name: 'Yesuf', email: 'yesuf023@gmail.com', password: '111111')
+group2 = Group.find_or_create_by!(name: 'Cosmetics', user: user1) do |group|
+  group.icon = 'https://i.pravatar.cc/300?img=2'
+end
+
+group3 = Group.find_or_create_by!(name: 'Clothes', user: user1) do |group|
+  group.icon = 'https://i.pravatar.cc/300?img=3'
+end
+
+purchase1 = Purchase.find_or_create_by!(name: 'Cream', author: user1) do |purchase|
+  purchase.amount = 10
+end
+
+purchase2 = Purchase.find_or_create_by!(name: 'Shampoo', author: user1) do |purchase|
+  purchase.amount = 20
+end
+
+purchase3 = Purchase.find_or_create_by!(name: 'New Dress', author: user1) do |purchase|
+  purchase.amount = 5
+end
+
+GroupPurchase.find_or_create_by!(group: group2, purchase: purchase1)
+GroupPurchase.find_or_create_by!(group: group2, purchase: purchase2)
+GroupPurchase.find_or_create_by!(group: group3, purchase: purchase3)
+
+user = User.find_or_create_by!(email: 'yesuf023@gmail.com') do |user|
+  user.name = 'Yesuf'
+  user.password = '111111'
+end
