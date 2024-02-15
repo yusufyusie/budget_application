@@ -51,6 +51,9 @@ The **SpendSmart** keeps track of all your expences associated with catogories. 
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://github.com/heartcombo/devise">Devise</a></li>
+    <li><a href="https://github.com/CanCanCommunity/cancancan">CanCanCan</a></li>
+    <li><a href="https://github.com/hotwired/turbo">Hotwire/Turbo</a></li>
   </ul>
 </details>
 
@@ -182,9 +185,11 @@ If you like this project just star it!
 
 Original design idea by <a target="_blank" href="https://www.behance.net/gregoirevella">Gregoire Vella</a>
 
-I would like to thank the Microverse program for the knowledge and skills I have acquired in Modules 1-5.
+I would like to thank the [Microverse](https://www.microverse.org/) program for the knowledge and skills I have acquired in Modules 1-5.
 
 I am grateful to all previous project reviewers for their advice. Thanks to them I could build this app.
+
+Special thanks to [Render](https://render.com/) for the deployment platform.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
