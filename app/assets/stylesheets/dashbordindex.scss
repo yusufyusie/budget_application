@@ -7,11 +7,13 @@
 }
 
 .custom-btn {
+  display: block;
   background-color: #007bff;
   width: 100%;
   padding: 10px;
-  color: #fff;
   border: none;
+  color: white;
+  cursor: pointer;
   &:hover {
     background-color: #0056b3;
     color: #fff;
@@ -23,9 +25,11 @@
   h1 {
     font-weight: bold;
     color: #333;
+    padding: 10px;
   }
   p {
     color: #666;
+    padding: 10px;
   }
 }
 
