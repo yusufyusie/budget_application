@@ -4,8 +4,7 @@ class User < ApplicationRecord
          :registerable,
          :recoverable,
          :rememberable,
-         :validatable,
-         :confirmable
+         :validatable
 
   has_many :purchases, foreign_key: 'author_id', dependent: :destroy
   has_many :groups, dependent: :destroy
