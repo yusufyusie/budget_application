@@ -85,6 +85,6 @@ production:
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV["DATABASE_URL"] %>
-  database: budget_application_production
+  database: budget_application_production_17e3
   username: user
-  password: lYBHxZ5GolPbIEunWOPxJZK7WBi6E6w5
+  password: 4DUjM38xolNj5pSK1LNYLCnzf2LsDZtM
