@@ -80,3 +80,5 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # Add the cancancan gem
 gem 'cancancan'
+
+gem 'inline_svg'
