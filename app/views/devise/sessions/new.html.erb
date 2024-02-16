@@ -21,18 +21,16 @@
           <turbo-frame id="login_form">
             <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'mt-4' }) do |f| %>
               <div class="mb-3">
-                <%= f.label :email, class: 'form-label' %>
                 <div class="input-group">
                   <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Enter your email' %>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Email' %>
                 </div>
               </div>
 
               <div class="mb-3">
-                <%= f.label :password, class: 'form-label' %>
                 <div class="input-group">
                   <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                  <%= f.password_field :password, autocomplete: "current-password", class: 'form-control', placeholder: 'Enter your password' %>
+                  <%= f.password_field :password, autocomplete: "current-password", class: 'form-control', placeholder: 'Password' %>
                 </div>
               </div>
 
