@@ -92,3 +92,18 @@ h1 {
 .custom-container {
   padding-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary, .btn-outline-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .img-fluid {
+    width: 80%;
+  }
+}
