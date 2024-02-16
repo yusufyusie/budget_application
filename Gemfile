@@ -60,9 +60,9 @@ group :development, :test do
   gem 'rubocop', '>= 1.0', '< 2.0'
 
   # Add testing gems
-  gem 'rspec-rails', '~> 5.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rspec-rails', '~> 5.0'
 
   # Add Guard for RSpec
   gem 'guard-rspec', require: false

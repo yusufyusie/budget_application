@@ -24,7 +24,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec.configure do |config|
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_path = "#{Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
