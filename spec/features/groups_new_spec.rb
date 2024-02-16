@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'When I open New Group page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
-    @user.confirm
 
     visit new_user_session_path
     fill_in 'Email', with: 'tom@example.com'
@@ -40,7 +39,7 @@ RSpec.describe 'When I open New Group page', type: :feature do
       click_button('Add Category')
     end
 
-    it 'redirects me to that Groups list page' do
+    it 'redirects me to the Groups list page' do
       expect(page).to have_current_path(groups_path)
     end
 
@@ -50,15 +49,21 @@ RSpec.describe 'When I open New Group page', type: :feature do
   end
 
   context 'When I click on a Add Category button without filling the form' do
-    it 'renders new page again' do
+    before(:each) do
       click_button('Add Category')
+    end
+
+    it 'renders new page again' do
       expect(page).to have_content('new category')
       expect(page).to have_button('Add Category', type: 'submit')
     end
 
-    it 'shows error message' do
-      click_button('Add Category')
-      expect(page).to have_content("Name can't be blank and Icon can't be blank")
+    it 'shows error message for Name' do
+      expect(page).to have_content("Name can't be blank")
+    end
+
+    it 'shows error message for Icon' do
+      expect(page).to have_content("Icon can't be blank")
     end
   end
 end

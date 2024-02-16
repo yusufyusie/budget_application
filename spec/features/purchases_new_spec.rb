@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'When I open New Purchase page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
-    @user.confirm
 
     visit new_user_session_path
     fill_in 'Email', with: 'tom@example.com'
@@ -12,6 +11,7 @@ RSpec.describe 'When I open New Purchase page', type: :feature do
 
     @group1 = Group.create(user: @user, name: 'Food', icon: 'https://i.pravatar.cc/300?img=13')
     @group2 = Group.create(user: @user, name: 'Cosmetics', icon: 'https://i.pravatar.cc/300?img=1')
+
     visit(new_group_purchase_path(@group1))
   end
 
@@ -32,8 +32,8 @@ RSpec.describe 'When I open New Purchase page', type: :feature do
     end
 
     it 'placeholders' do
-      expect(page).to have_css("input[placeholder='Bodyshop cream']")
-      expect(page).to have_css("input[placeholder='15']")
+      expect(page).to have_selector("input[name='purchase[name]'][placeholder='Bodyshop cream']")
+      expect(page).to have_selector("input[name='purchase[amount]'][placeholder='15']")
     end
 
     it 'Add Transaction button' do

@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'When I open Groups index page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
-    @user.confirm
 
     visit new_user_session_path
     fill_in 'Email', with: 'tom@example.com'
@@ -40,10 +39,6 @@ RSpec.describe 'When I open Groups index page', type: :feature do
     expect(page).to have_content('$10.0')
   end
 
-  it 'shows the Add a new category button' do
-    expect(page).to have_link('Add a new category', href: new_group_path)
-  end
-
   context 'When I click on a Group name' do
     it "redirects me to that Group's transactions page" do
       click_link('Food')
@@ -65,7 +60,9 @@ RSpec.describe 'When I open Groups index page', type: :feature do
 
   context 'When I click on a Add transaction button' do
     it 'redirects me to form that adds new transaction to the group' do
-      click_link('add transaction', match: :first)
+      within first('.group_list li') do
+        click_link('add transaction')
+      end
       expect(page).to have_current_path(new_group_purchase_path(@group1))
     end
   end

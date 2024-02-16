@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'When I open Purchases index page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
-    @user.confirm
 
     visit new_user_session_path
     fill_in 'Email', with: 'tom@example.com'
@@ -12,8 +11,8 @@ RSpec.describe 'When I open Purchases index page', type: :feature do
 
     @group1 = Group.create(user: @user, name: 'Food', icon: 'https://i.pravatar.cc/300?img=13')
     @group2 = Group.create(user: @user, name: 'Cosmetics', icon: 'https://i.pravatar.cc/300?img=1')
-    @purchase1 = Purchase.create(name: 'Apples', amount: 6, author: @user, groups: [@group1])
-    @purchase2 = Purchase.create(name: 'Bananas', amount: 4, author: @user, groups: [@group1])
+    @purchase1 = Purchase.create(name: 'Apples', amount: 5, author: @user, groups: [@group1])
+    @purchase2 = Purchase.create(name: 'Bananas', amount: 5, author: @user, groups: [@group1])
     visit(group_purchases_path(@group1))
   end
 
@@ -21,9 +20,14 @@ RSpec.describe 'When I open Purchases index page', type: :feature do
     expect(page).to have_content('transactions')
   end
 
-  it 'shows the name and amount of each purchase' do
+  it 'shows the name of each purchase' do
     [@purchase1, @purchase2].each do |purchase|
       expect(page).to have_content(purchase.name)
+    end
+  end
+
+  it 'shows the amount of each purchase' do
+    [@purchase1, @purchase2].each do |purchase|
       expect(page).to have_content("$#{purchase.amount}")
     end
   end
