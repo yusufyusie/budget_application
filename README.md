@@ -103,7 +103,7 @@ Clone this repository to your desired folder:
 Login to your GitHub account. Clone this repository to your desired folder:
 
 > cd my-folder
-> git clone git@github.com:yusufyusie/budget-app.git
+> git clone git@github.com:yusufyusie/budget-application.git
 
 Setup database:
 > sudo -u postgres createuser --interactive --pwprompt
@@ -130,17 +130,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Run tests
 
-To run tests, run the following command:
-> rspec
+To ensure the quality and reliability of our code, we use a variety of testing tools and linters. Here's how you can run them:
+
+- **Run Tests**: We use RSpec for our tests. To run them, use the following command:
+
+  ```bash
+  rspec
 
 You can also check linter errors by running these commands:
 > rubocop
 > npx stylelint "**/*.{css,scss}"
-
-(OPTIONAL) For testing the confirmation emails:
-> gem install mailcatcher
-
-Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,25 +157,38 @@ Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **add transactions/animations**
-- [ ] **add styles for desktop version**
-- [ ] **improve UX/UI design**
+We're constantly working to improve and expand the functionality of this project. Here are some features we're planning to implement in the future:
+
+- [ ] **Transaction Animations**: To make the user experience more dynamic and engaging, we're planning to add animations to the transaction process.
+- [ ] **Desktop Version Styles**: We're working on a design overhaul to ensure our application looks great and is easy to use on desktop devices.
+- [ ] **UX/UI Design Improvements**: We're committed to making our application as user-friendly as possible, and we're always looking for ways to improve our UX/UI design.
+
+Stay tuned for these exciting updates!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 How to Contribute <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+We welcome all contributions and suggestions! Here's how you can help:
 
-Feel free to check the [issues page](../../issues/).
+- **Report a bug**: If you've found a problem, please let us know through the [issues page](../../issues/).
+- **Suggest a feature**: Have an idea for a new feature? We'd love to hear about it on the [issues page](../../issues/).
+- **Submit a pull request**: If you've fixed a bug or implemented a new feature, we'd be thrilled to review your changes.
+
+Remember, all participants are expected to follow our code of conduct.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## ⭐️ Support Us <a name="support"></a>
 
-## ⭐️ Show your support <a name="support"></a>
+If you find this project useful, please consider supporting us. Here's how:
 
-If you like this project just star it!
+- **Star this repository**: It's a simple way to help others discover this project.
+- **Share with your network**: If you know someone who would benefit from this project, please share it.
+- **Contribute**: See the section above on how to contribute.
+
+Your support means a lot to us!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -46,11 +46,43 @@ body {
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
   background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: #333;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
 }
 
-.navbar-brand {
-  color: #333;
+@media (max-width: 992px) {
+  .navbar {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+
+    .nav-item {
+      .nav-link {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 .nav-link {
