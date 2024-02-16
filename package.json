@@ -1,0 +1,21 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "build:css": "postcss ./app/assets/stylesheets/application.scss -o ./app/assets/builds/application.css"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1",
+    "node-sass": "^9.0.0",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}

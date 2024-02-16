@@ -1,0 +1,54 @@
+.bg-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-btn {
+  display: block;
+  background-color: #007bff;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+
+  transition: background-color 0.3s ease;
+}
+
+.bg-light.text-dark {
+  h1 {
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+  }
+
+  p {
+    color: #666;
+    padding: 10px;
+  }
+}
+
+.rounded-lg {
+  margin: 2rem 0;
+}
+
+.shadow-lg {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.row {
+  margin: 0;
+}

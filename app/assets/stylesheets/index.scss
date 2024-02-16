@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #e4e4e4;
+  color: #2b2b2b;
+}
+
+.content {
+  height: 60%;
+  margin-bottom: 0;
+}
+
+.custom-button-group {
+  margin-top: 0;
+}
+
+.wallpaper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container h1 {
+  color: #2b2b2b;
+  font-size: 2.5rem;
+  font-family: 'Pacifico', sans-serif;
+}
+
+.btn-primary {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #007bff;
+
+  &:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+}
+
+.bttn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }
+}
+
+.img-fluid {
+  max-height: 70%;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.custom-container {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .img-fluid {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    height: 50%;
+  }
+
+  .img-fluid {
+    max-height: 50%;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -1,10 +1,21 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'purchases/index'
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Dashboard route
+  get '/dashboard', to: 'dashboard#index', as: 'dashboard'
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  # Home route
+  get 'home/index'
+  root 'home#index'
+
+  # Health check route
+  get 'up', to: 'rails/health#show', as: :rails_health_check
+
+  # Resourceful routes for groups, categories, and purchases
+  resources :groups, only: %i[index new create edit update destroy] do
+    resources :purchases
+  end
+  # ...
 end
