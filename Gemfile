@@ -63,6 +63,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0'
   gem 'factory_bot_rails'
   gem 'faker'
+
+  # Add Guard for RSpec
+  gem 'guard-rspec', require: false
 end
 
 group :development do
@@ -74,12 +77,23 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Add the Bullet gem for killing N+1 queries and unused eager loading
+  gem 'bullet'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'fuubar'
+  gem 'rails-controller-testing'
+  gem 'rspec_junit_formatter'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 4.5.1'
+  gem 'webdrivers'
+
+  # Add SimpleCov for test coverage
+  gem 'simplecov', require: false
 end
 
 gem 'devise', '~> 4.9'
