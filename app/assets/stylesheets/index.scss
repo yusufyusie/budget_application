@@ -1,13 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+}
+
+.content {
+  height: 60%;
+  margin-bottom: 0; 
+}
+
+.custom-button-group {
+  margin-top: 0;
 }
 
 h1 {
   color: #333;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 2.5rem;
 }
 
 .btn-primary {
@@ -27,6 +47,11 @@ h1 {
     background-color: #0056b3;
     color: white;
   }
+}
+
+.bttn {
+  width: 100%;
+  margin-bottom: 10px; 
 }
 
 .btn-outline-primary {
@@ -50,8 +75,8 @@ h1 {
 }
 
 .img-fluid {
-  max-height: 60%;
-  width: 80%;
+   max-height: 50%; 
+  width: 70%;
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,4 +86,8 @@ h1 {
     transform: scale(1.05);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
   }
+}
+
+.custom-container {
+  padding-bottom: 10px; 
 }
