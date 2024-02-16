@@ -117,6 +117,17 @@ a {
   color: black;
 }
 
+.header-class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title-wrapper {
+  flex-grow: 1;
+  text-align: center;
+}
+
 header {
   padding: 1rem 0.8rem;
   display: flex;
