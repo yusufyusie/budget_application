@@ -180,7 +180,7 @@ Remember, all participants are expected to follow our code of conduct.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ⭐️ Support Us <a name="support"></a>
+## ⭐️ Support me <a name="support"></a>
 
 If you find this project useful, please consider supporting us. Here's how:
 
@@ -188,7 +188,7 @@ If you find this project useful, please consider supporting us. Here's how:
 - **Share with your network**: If you know someone who would benefit from this project, please share it.
 - **Contribute**: See the section above on how to contribute.
 
-Your support means a lot to us!
+Your support means a lot to me!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
