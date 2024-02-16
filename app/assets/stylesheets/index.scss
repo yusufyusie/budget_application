@@ -117,3 +117,24 @@ html {
     width: 80%;
   }
 }
+
+@media (max-width: 768px) {
+  .content {
+    height: 50%; 
+  }
+
+  .img-fluid {
+    max-height: 50%; 
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
