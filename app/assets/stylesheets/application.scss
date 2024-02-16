@@ -145,6 +145,10 @@ main {
 
 .with_actions {
   margin-bottom: 5rem;
+
+  .empty {
+    text-align: center;
+  }
 }
 
 .with_two_actions {
@@ -231,7 +235,7 @@ span {
 
 .name {
   color: $normal-grey;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .purchase .name {
@@ -245,7 +249,7 @@ span {
 
 .amount {
   color: $dark-grey;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -257,7 +261,7 @@ span {
 
 .date {
   color: $light-grey;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .group_info .date {
@@ -316,4 +320,19 @@ span {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 576px) {
+  #homepage h1 {
+    font-size: 1.5rem;
+  }
+
+  .with_actions .group_list li .item .group_info .name {
+    font-size: 1.2rem;
+  }
+
+  .with_actions .group_list li .item .group_info .amount,
+  .with_actions .group_list li .item .group_info .date {
+    font-size: 1rem;
+  }
 }
