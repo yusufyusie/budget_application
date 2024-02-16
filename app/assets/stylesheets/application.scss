@@ -110,8 +110,7 @@ a {
   text-decoration: none;
 }
 
-.chevron,
-.burger-menu {
+.chevron {
   width: 2rem;
   height: 2rem;
   color: black;
@@ -151,6 +150,7 @@ header h1 {
 main {
   background-color: $grey;
   padding: 0.8rem;
+  padding-left: 0;
   flex: 1;
 }
 

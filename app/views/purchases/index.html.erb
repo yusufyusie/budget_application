@@ -55,7 +55,6 @@
 
 <section id="actions">
   <% if @purchases.empty? %>
-    <%= button_to "delete category", {:controller => :groups, :action => 'destroy', :id => @group.id }, :method => :delete, data: { turbo: false }, class: "btn blue_action" %>
     <%= link_to "add transaction", new_group_purchase_path, class: "btn upper_action", data: { turbo: false }  %>
   <% else %>
     <%= link_to "add transaction", new_group_purchase_path, class: "btn", data: { turbo: false }  %>
